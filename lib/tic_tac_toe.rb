@@ -66,11 +66,11 @@ def turn(board)
   puts "Please enter a number 1-9"
   input = gets.chomp
   index = input.to_i - 1
-  if valid_move?(board,index)
-    move(board, index, current_player(board))
-    display_board(board)
+  if valid_move?(index)
+    move(index, current_player)
+    display_board
   else
-    turn(board)
+    turn
   end
 end
 
